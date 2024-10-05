@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    /*Es el espacio del borde hacia afuera */
+    padding: 0;
+    /*Es el espacio que hay entre el contenido y el borde margen interno*/
+}
+
+:root {
+    /*Forma de declarar una variable con --y el nombre de la variable*/
+    --primaryColor: #CA0E62;
+    --backgroundColor: #950D69;
+    --textColor: #000000;
+    --typoGraphy: 'Times New Roman', sans-serif;
+
+}
+/*--------------------INICIO BODY--------------------*/
+
+body {
+    width: 100vw;
+    /*ancho vw significa ancho de pantalla independiente de si es celular, computdor*/
+    height: auto;
+    /*alto*/
+    box-sizing: border-box;
+    /*que se respete las dimensiones, dimensionamiento de la caja, border-box de borde a borde*/
+    background-color: var(--backgroundColor);
+    /*color de fondo*/
+    font-family: var(--typoGraphy);
+    overflow-x: hidden;
+    /*para gestionar scroll(barra horizontal o vertical)*/
+    /*si el contenido sobresale me quita el escroll horizontal(x)*/
+}
+
+/*--------------------FIN BODY--------------------*/
+
+
+/*--------------------INICIO HEADER--------------------*/
+
+header {
+    /*border: solid red;*/
+    /*Muestra bordes y se puede elegir el color que queramos*/
+    width: 100vw;
+    /*vw-> viewport width-> ancho de pantalla*/
+}
+
+/*--------------------FIN HEADER--------------------*/
+
+/*--------------------INICIO MENU DE NAVEGACION--------------------*/
+.container-navBar {
+    /*elemento padre*/
+    width: 100vw;
+    height: 60px;
+    background-color: var(--primaryColor);
+    font-weight: bold;
+    /* poner negrita a las palabras, recomendable palabras clave*/
+
+
+}
+
+.navBar-list {
+    /*elemento hijo es recomendable ponerlo en % para la adaptabilidad a otras pantallas width:100% equivale a 100vw del elemento padre y height:100% equivale al 60px del elemento padre*/
+    width: 100%;
+    height: 100%;
+    /*FLEXBOX
+    display  es como vemos el contenido
+    fle -> lo podamos ver de forma flexible-> caja flexible
+    las propiedades de flex se usan en el padre
+    */
+    /*por defecto me pone los elementos uno al lado del otro*/
+    display: flex;
+    /*centrar mis elementos del menu*/
+    justify-content: center;
+    align-items: center;
+    /*centrar logo*/
+    list-style: none;
+    /*quitar los puntos de la lista*/
+    gap: 50px;
+    /*separar los elementos del menu entre si*/
+
+}
+.navBar-list a{
+    text-decoration: none;
+    color: black;
+
+}
+
+/*--------------------INICIO MAIN--------------------*/
+.contentSection {
+    width: 80vw;
+    margin: 100px auto;
+    /*centrar contenedor*/
+}
+
+.title {
+    color: var(--textColor);
+    font-size: 50px;
+    /*Tamaño de fuente*/
+    text-align: center;
+    /*centrar texto*/
+    margin-bottom: 40px;
+    /*margen de abajo*/
+
+}
+
+.container {
+    width: 100%;
+    /*hereda el ancho del papa-> section*/
+    display: flex;
+    /*centrar los elementos*/
+    justify-content: center;
+    /*centrar verticalmente*/
+    align-items: center;
+    gap: 40px;
+    
+    /*espaciar el parrafo de la imagen*/
+}
+
+#img1 {
+    width: 20%;
+    height: 50vh;
+    border-radius: 10px;
+    /*redondeo de bordes de la imagen*/
+
+}
+
+#p1{
+    width: 100%;
+    /*hereda el ancho del papa-> section*/
+    display: flex;
+    /*centrar los elementos*/
+    justify-content: center;
+    /*centrar verticalmente*/
+    align-items: center;
+
+}
+
+/*--------------------FIN MAIN--------------------*/
+
+
+/*--------------------INICIO FOOTER--------------------*/
+
+footer {
+    background-color: var(--primaryColor);
+    padding: 50px;
+    text-align: center;
+    font-size: 20px;
+    color: var(--textColor);
+    margin-top: 20px;
+    /*margen arriba*/
+}
+
+/*--------------------FIN FOOTER--------------------*/
